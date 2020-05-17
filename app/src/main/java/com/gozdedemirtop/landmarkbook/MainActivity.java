@@ -27,17 +27,24 @@ public class MainActivity extends AppCompatActivity {
 
         listView = findViewById(R.id.listView);
 
+        //DATA
+        //Landmarks Names
+
         final ArrayList <String> landmarkNames = new ArrayList<>();
         landmarkNames.add("Pisa Tower");
         landmarkNames.add("Golden Gate Bridge");
         landmarkNames.add("Eiffel Tower  ");
         landmarkNames.add("London Bridge");
 
+        //Country Names
+
         final ArrayList<String> countryNames = new ArrayList<>();
         countryNames.add("Italy");
         countryNames.add("USA");
         countryNames.add("France");
         countryNames.add("United Kingdom");
+
+        //Images
 
         Bitmap pisa = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.pisa);
         Bitmap goldenGate = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.goldengate);
@@ -49,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
         landmarkImages.add(goldenGate);
         landmarkImages.add(eiffel);
         landmarkImages.add(london);
+
+        //ListView
 
         ArrayAdapter arrayAdapter = new ArrayAdapter(MainActivity.this, android.R.layout.simple_list_item_1, landmarkNames);
         listView.setAdapter(arrayAdapter);
@@ -69,9 +78,6 @@ public class MainActivity extends AppCompatActivity {
                 singleton.setChosenImage(landmarkImages.get(position));
 
                 startActivity(intent);
-
-
-
             }
         });
 

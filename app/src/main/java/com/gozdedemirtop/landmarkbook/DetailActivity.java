@@ -31,7 +31,7 @@ public class DetailActivity extends AppCompatActivity {
         countryNameText.setText(countryName);
 
         Singleton singleton = Singleton.getInstance();
-        imageView.setImageBitmap(singleton.getChosenImage());
+        imageView.setImageBitmap(singleton.getChosenImage() );
 
         //imageView.setImageBitmap(selectedImage);
 
